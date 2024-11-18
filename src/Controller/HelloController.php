@@ -1,5 +1,4 @@
 <?php
-// src/Controller/HelloController.php
 namespace App\Controller;
 
 use Symfony\Component\Routing\Attribute\Route;
