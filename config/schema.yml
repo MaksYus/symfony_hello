@@ -1,5 +1,0 @@
-symfony_mysql:
- user:
-  id: ~
-  login: { type: varchar(255) }
-  password: { type: varcher(255) }
