@@ -1,0 +1,60 @@
+Установил php и php-lxml
+установил symfony
+скачал composer https://getcomposer.org/download/
+
+
+symfony new symfony_hello --version=6.4 --php=8.1 --webapp --docker
+
+
+стартануть / стопнуть
+
+symfony server:start
+symfony derver:stop
+
+
+открыть
+symfony open:local
+
+
+Добавил src/Controller/HelloController.php c путём к этому контроллеру.
+
+
+Для работы с базой прописав
+composer require symfony/orm-pack
+composer require --dev symfony/maker-bundle
+
+sudo apt-get install php-mysql php-pdo
+
+
+В .env прописал строку опдключения к базе
+
+по MySQL скачал, установил, настроил пользюка root и всё ок
+
+а потом php bin/console doctrine:database:create
+
+
+
+на изях создал табличку user
+php bin/console make:entity
+
+ну и миграцию сразу ебнул php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+
+Собсна через meke:entity можно всё делать
+
+
+
+а дальше создал контроллер для user:
+php bin/console male:controller UserController
+
+настроил его
+
+запустил сервак.
+
+дополнительно установил composer require amphp/http-client:^4.2.1
+
+
+если вызвать https://127.0.0.1:8000/user
+создаст новго пользюка, в консольке будет всё ок
+
+ахуеть, есл заранить скриптик php bin/console dbal:run-sql 'select * from user' то в базе всё будет
